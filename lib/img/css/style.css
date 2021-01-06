@@ -1,3 +1,68 @@
+body {
+  background-color: #eaede9;
+}
+
 h1 {
-  color: salmon;
+  color: #4c5152;
+}
+h2 {
+  color: #fffffd;
+}
+p {
+  color: #4c5152;
+}
+img {
+  width: auto;
+  height: 100px;
+}
+
+.container {
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    ". heading heading heading ."
+    "images images images images images"
+    ". . button . ."
+    ". heading1 heading1 heading1 ."
+    "images1 images1 images1 images1 images1"
+    ". . button1 . .";
+}
+.heading {
+  grid-area: heading;
+  justify-self: center;
+}
+
+.imagerow {
+  grid-area: images;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "san-fancisco new-york london";
+}
+.button {
+  grid-area: button;
+  justify-self: center;
+}
+.heading1 {
+  grid-area: heading1;
+  justify-self: center;
+}
+.imagerow1 {
+  grid-area: images1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "napa sonoma san-fancisco-2";
+}
+.button1 {
+  grid-area: button1;
+  justify-self: center;
+}
+
+.imagerow {
+  display: flex;
+}
+.imagerow1  {
+  display: flex;
 }
